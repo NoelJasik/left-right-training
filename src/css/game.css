@@ -1,0 +1,84 @@
+.game-window {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.game-window p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  position: absolute;
+}
+.game-window button {
+  width: 50%;
+  min-height: 80vh;
+  background-color: transparent;
+  border: none;
+}
+.game-window button:hover {
+  cursor: pointer;
+  background-color: #242423;
+}
+.game-window button:active {
+  background-color: #242423;
+}
+
+.round-end-window {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  flex-direction: column;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.round-end-window .game-time {
+  font-size: 4rem;
+  font-weight: 600;
+  margin: 0.25rem;
+}
+.round-end-window .game-count {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #7A807C;
+  margin: 0.25rem;
+}
+.round-end-window p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0.25rem;
+}
+
+.game-button {
+  background-color: #333533;
+  color: #e8eddf;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 0.5rem;
+  transition: 0.25s ease-in-out;
+  display: block;
+  border-radius: 0.5rem;
+  border-width: 0.05em;
+  border-style: solid;
+  border-color: #7A807C;
+  margin: 0.25rem;
+  cursor: pointer;
+}
+.game-button:hover {
+  color: #f5cb5c;
+  border-color: #efdc9e;
+  scale: 1.1;
+  transition: 0.15s ease-in-out;
+}
+.game-button:active {
+  color: #f5cb5c;
+  border-color: #efdc9e;
+  scale: 1.25;
+  transition: 0.15s ease-in-out;
+}/*# sourceMappingURL=game.css.map */

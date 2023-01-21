@@ -1,0 +1,41 @@
+$gainsboro: #7A807C;
+$alabaster: #e8eddfff;
+$medium-champagne: #efdc9eff;
+$maize-crayola: #f5cb5cff;
+$eerie-black: #242423ff;
+$jet: #333533ff;
+
+footer
+{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: $eerie-black;
+    width: 100%;
+    text-align: center;
+    border-top-style: solid;
+    border-top-color: $gainsboro;
+    border-top-width: 0.1em;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    a 
+    {
+        color: $medium-champagne;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 1rem;
+        transition: 0.25s ease-in-out;
+        display: block;
+        &:hover 
+        {
+            color: $maize-crayola;
+            scale: 1.1;
+            transition: 0.15s ease-in-out;
+        }
+    }
+}

@@ -1,13 +1,25 @@
+$gainsboro: #7A807C;
+$alabaster: #e8eddfff;
+$medium-champagne: #efdc9eff;
+$maize-crayola: #f5cb5cff;
+$eerie-black: #242423ff;
+$jet: #333533ff;
+
 *
 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: $alabaster;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .app {
-    font-family: 'Open Sans', sans-serif;
     display: flex;
 	flex-direction: column;
 	align-items: center;
+    justify-content: space-between;
+    background-color: $jet;
+    width: 100%;
+    min-height: 100vh;
 }

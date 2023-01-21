@@ -1,0 +1,103 @@
+$gainsboro: #7A807C;
+$alabaster: #e8eddfff;
+$medium-champagne: #efdc9eff;
+$maize-crayola: #f5cb5cff;
+$eerie-black: #242423ff;
+$jet: #333533ff;
+
+
+.game-window {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    p {
+        font-size: 1.5rem;
+        font-weight: 600;
+        position: absolute;
+    }
+
+    button {
+        width: 50%;
+        min-height: 80vh;
+        background-color: transparent;
+        border: none;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $eerie-black;
+        }
+
+        &:active {
+            background-color: $eerie-black;
+        }
+    }
+}
+
+.round-end-window {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    flex-direction: column;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    .game-time {
+        font-size: 4rem;
+        font-weight: 600;
+        margin: 0.25rem;
+    }
+    .game-count
+    {
+        font-size: 1rem;
+        font-weight: 600;
+        color: $gainsboro;
+        margin: 0.25rem;
+    }
+    p   {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 0.25rem;
+    }
+    
+}
+
+.game-button
+{
+    background-color: $jet;
+    color: $alabaster;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 0.5rem;
+    transition: 0.25s ease-in-out;
+    display: block;
+    border-radius: 0.5rem;
+    border-width: 0.05em;
+    border-style: solid;
+    border-color: $gainsboro;
+    margin: 0.25rem;
+    cursor: pointer;
+
+    &:hover 
+    {
+        color: $maize-crayola;
+        border-color: $medium-champagne;
+        scale: 1.1;
+        transition: 0.15s ease-in-out;
+    }
+    &:active 
+    {
+        color: $maize-crayola;
+        border-color: $medium-champagne;
+        scale: 1.25;
+        transition: 0.15s ease-in-out;
+    }
+}

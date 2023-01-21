@@ -2,11 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #e8eddf;
+  font-family: "Open Sans", sans-serif;
 }
 
 .app {
-  font-family: "Open Sans", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  background-color: #333533;
+  width: 100%;
+  min-height: 100vh;
 }/*# sourceMappingURL=main.css.map */
