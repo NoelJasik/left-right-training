@@ -50,9 +50,13 @@
   margin: 0.25rem;
 }
 .round-end-window p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
   margin: 0.25rem;
+  text-align: center;
+}
+.round-end-window strong {
+  color: #efdc9e;
 }
 
 .game-button {

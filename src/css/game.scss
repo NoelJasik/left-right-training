@@ -63,9 +63,15 @@ $jet: #333533ff;
         margin: 0.25rem;
     }
     p   {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         font-weight: 600;
         margin: 0.25rem;
+        text-align: center;
+        
+    }
+    strong
+    {
+        color: $medium-champagne;
     }
     
 }

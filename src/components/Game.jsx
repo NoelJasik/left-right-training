@@ -6,7 +6,7 @@ export default function Game() {
 
     // game state
     const [isRandomStyle, setIsRandomStyle] = React.useState(false);
-    const [isGameStarted, setIsGameStarted] = React.useState(true);
+    const [isGameStarted, setIsGameStarted] = React.useState(false);
     const [isRoundFinished, setIsRoundFinished] = React.useState(false);
     const [isGameFinished, setIsGameFinished] = React.useState(false);
 
@@ -30,7 +30,27 @@ export default function Game() {
         if (roundCount >= gameCount) {
             setIsGameFinished(true);
         }
+        randomDirection();
+    }
 
+    const startGame = () => {
+        setIsGameStarted(true);
+        setIsRoundFinished(false);
+        setIsGameFinished(false);
+        setRoundCount(0);
+        setReactionTime([]);
+        setStartTime(0);
+        setIncorrectGuessCount(0);
+        randomDirection();
+    }
+
+    const randomDirection = () => {
+        let random = Math.floor(Math.random() * 2);
+        if (random == 0) {
+            setDirection('left');
+        } else {
+            setDirection('right');
+        }
     }
 
     const convertTime = (time) => {
@@ -66,7 +86,7 @@ export default function Game() {
 
 
         // gameplay
-        if (!isGameFinished) {
+        if (!isGameFinished && isGameStarted) {
             if (!isRoundFinished) {
                 if (startTime == 0) {
                     setStartTime(Date.now());
@@ -96,7 +116,16 @@ export default function Game() {
                         <p className='game-count'>Your average time is:</p>
                         <p className='game-time'>{convertTime(averageTime())}</p>
                         <p className='game-count'>You guessed incorrectly <span style={{"color":(incorrectGuessCount == 0 ? "#AFA" : "#FAA")}}>{incorrectGuessCount}</span> times</p>
-                        <button className='game-button' onClick={() => setIsRoundFinished(false)}>Next Game</button>
+                        <button className='game-button' onClick={() => startGame()}>Next Game</button>
+                    </div>
+            )
+        } else {
+            return (
+                <div className='round-end-window'>
+                        <p className='game-time'>Welcome!</p>
+                        <p>This game will help you <strong>train</strong> your abillity  <br/>to distinquish between <strong>left</strong> and <strong>right</strong></p>
+                        <p className='game-count'>Press the button to start the game</p>
+                        <button className='game-button' onClick={() => startGame()}>Start</button>
                     </div>
             )
         }
